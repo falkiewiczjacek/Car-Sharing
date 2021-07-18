@@ -1,0 +1,579 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    --primary-color: #FF0000;
+    --secondary-color: #28272C;
+}
+
+.container {
+    max-width: 1088px;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column
+}
+
+header {
+    background-image: url("/Users/jack/Front-End Dev/Car-Sharing/images/Image.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+header::after {
+    content:"";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav .container {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container ul {
+    display: flex;
+    list-style: none;
+}
+
+nav .container ul li {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    padding: 0px 30px;
+    position: relative;
+    z-index: 0;
+}
+
+nav .container ul li a:hover::after {
+    content:"";
+    position: absolute;
+    top: -37px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(255, 255, 255, 0.3);
+    height: 90px;
+    padding: 0 50px;
+    z-index: -1;
+
+}
+
+
+nav .container ul li a {
+    text-decoration: none;
+    color: white;
+}
+.banner__content {
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .red-logo {
+    color: var(--primary-color);
+    padding: 0px 10px;
+}
+
+nav span {
+    color: white;
+}
+
+.banner__content h1 {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
+.banner__content p {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    padding: 40px;
+
+}
+
+.red__button, .white__button {
+
+    border-radius: 40px;
+    border: none;
+    padding: 22px 55px;
+    margin: 0px 10px;
+}
+
+.red__button, .red__button a{
+    background-color: var(--primary-color);
+    color: white;  
+}
+.white__button a{
+    color: var(--primary-color); 
+}
+.buttons a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.buttons {
+    display: flex;
+
+}
+
+header .container {
+    position: relative;
+}
+.arrow__circle {
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0px 3px 6px #FF00004D;
+}
+
+body h3 {
+    margin: 0 auto;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+body h3::before {
+    content:'';
+    position: absolute;
+    top: 15px;
+    left: -80px;
+    height: 4px;
+    border-radius: 2px;
+    width: 65px;
+    background-color: var(--primary-color);
+
+}
+
+body h3::after {
+    content:'';
+    position: absolute;
+    top: 15px;
+    right: -80px;
+    height: 4px;
+    border-radius: 2px;
+    width: 65px;
+    background-color: var(--primary-color);
+
+}
+
+body section {
+    margin-top: 90px;
+}
+
+.blog__section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blog__section .articles-wrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.articles-wrapper article{
+
+    width: 350px;
+}
+
+.articles-wrapper article img {
+    width: 340px;
+}
+
+.articles-wrapper article h4 {
+    padding: 25px 0px;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #6A6A6A;
+}
+
+.articles-wrapper article p {
+    width: 80%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #6A6A6A;
+}
+
+main button, main button a {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 3px 6px #FF00004D;
+
+}
+
+main button{
+    margin-top: 15px;
+
+}
+
+.services__section .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services-wrapper {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services-wrapper article {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    margin-bottom: 100px;
+}
+
+.services-wrapper article img {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.services-wrapper article p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #B2B2B2
+}
+
+.services-wrapper article h4 {
+    margin: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+    color: white;
+}
+.services__section {
+    background-color: var(--secondary-color);
+}
+
+#h3--white {
+    color: white;
+    margin-top: 60px;
+}
+
+.contact__section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 100px;
+}
+
+.contact-wrapper img {
+    width: 500px;
+    margin-right: 8px;
+}
+
+.contact-wrapper form {
+    width: 500px;
+    margin-left: 8px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+input[type="text"],
+input[type="email"],
+input[type="textarea"]
+{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #D1D1D1;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="textarea"]:focus {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0px 1px 6px #FF00004D;
+}
+
+input[type="textarea"] {
+    height: 140px;
+}
+
+label[for="rules"]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #B2B2B2;
+    width: 420px;
+    line-height: 14px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 8px;
+  border: 1px solid #D1D1D1;
+  outline: none;
+  position: relative;
+  margin-right: 10px;
+    
+}
+
+input[type="checkbox"]:checked {
+    content: url("/Users/jack/Front-End Dev/Car-Sharing/images/Icon\ Check.svg");
+    padding: 3px;
+  }
+
+  input[type="checkbox"]:checked:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+button[type="submit"] {
+    align-self: flex-end;
+}
+
+.rules {
+    display: flex;
+}
+
+input::placeholder {
+color: #B2B2B2;
+}
+
+button[type="submit"] {
+    padding: 10px 50px;
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+}
+
+footer {
+    background-color: var(--secondary-color);
+
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+}
+
+footer .logo2 .red-logo {
+    color: var(--primary-color);
+    padding: 0px 10px;
+}
+
+footer span {
+    color: white;
+}
+
+.logo2 {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+.logo2 img{
+    width: 20px;
+}
+.links, .links a {
+    display: flex;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}
+
+.links ul {
+    padding-top: 30px;
+    margin-right: 150px;
+    line-height: 26px;
+}
+
+.copyrights, .copyrights {
+
+    height: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 12px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    color: #D1D1D1;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1070px) {
+
+    .articles-wrapper article{
+        margin: 0 auto;
+        margin: 20px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .articles-wrapper article img {
+        width: 460px;
+    }
+
+    .articles-wrapper article h4 {
+        text-align: center;
+    }
+    
+    .articles-wrapper article p {
+        text-align: center;
+    }
+    .contact-wrapper img {
+        width: 550px;
+        margin-right: 8px;
+
+    }
+    
+    .contact-wrapper form {
+        width: 520px;
+        margin-left: 8px;
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 780px) {
+nav .container ul {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-wrapper img {
+        width: 400px;
+        margin-right: 8px;
+
+    }
+    
+    .contact-wrapper form {
+        width: 380px;
+        margin-left: 8px;
+        margin-bottom: 40px;
+    }
+}
